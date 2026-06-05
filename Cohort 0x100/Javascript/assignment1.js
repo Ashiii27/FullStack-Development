@@ -17,6 +17,7 @@ const interval = setInterval(() => {
 
 //calculate the time it takes  between a setTimeout call and the inner function actually running
 
+/*
 const start = Date.now();
 
 setTimeout(() => {
@@ -25,4 +26,19 @@ setTimeout(() => {
   console.log(`Actual delay: ${actual}ms`);
   console.log(`Drift: ${actual - 2000}ms`);
 }, 2000);
+
+*/
+
+//create a terminal clock(HH:MM:SS)
+
+setInterval(() => {
+  const now = new Date();
+
+  const HH = String(now.getHours()).padStart(2, "0");
+  const MM = String(now.getMinutes()).padStart(2, "0");
+  const SS = String(now.getSeconds()).padStart(2, "0");
+
+  console.clear();
+  console.log(`${HH}:${MM}:${SS}`);
+}, 1000);
 
