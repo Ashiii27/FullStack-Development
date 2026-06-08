@@ -28,3 +28,30 @@ fs.readFile("a.txt","utf-8",function(err,data){
     console.log(data);
 });
 console.log("this is a message");
+```
+
+Real use of callback functions are in the case of async functions
+
+
+Promises in JavaScript :
+
+Promises are syntactical sugar that makes the code slightly more readable
+
+Example : 
+
+```JavaScript
+
+function ReadFile() {
+  return new Promise(function (resolve) {
+    fs.readFile("a.txt", "utf-8", function (err, data) {
+      resolve(data);
+    });
+  });
+}
+
+function onDone(data) {
+  console.log(data);
+}
+
+ReadFile().then(onDone);
+```
