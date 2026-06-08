@@ -18,3 +18,13 @@ function findSumTill1000(){
 
 setTimeout(findSumTill1000,1000)    //calling as async function
 console.log("hello world")
+```
+
+Another async function 
+
+```Javascript
+const fs = require('fs');
+fs.readFile("a.txt","utf-8",function(err,data){
+    console.log(data);
+});
+console.log("this is a message");
