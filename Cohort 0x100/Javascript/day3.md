@@ -61,3 +61,9 @@ Async Await
 
 ![Difference between normal syntax and async await syntax](image.png)
 Difference between normal syntax and async await syntax
+
+
+This is usually used on the caller side , not on the side where you define the async function
+Any function which wants to use await , must be a async function 
+
+![all three functions](image-1.png)
