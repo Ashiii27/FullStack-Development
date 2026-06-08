@@ -35,6 +35,7 @@ Real use of callback functions are in the case of async functions
 
 Promises in JavaScript :
 
+It is just a class that make callbacks and async funtions more readable.
 Promises are syntactical sugar that makes the code slightly more readable
 
 Example : 
@@ -55,3 +56,8 @@ function onDone(data) {
 
 ReadFile().then(onDone);
 ```
+
+Async Await
+
+![Difference between normal syntax and async await syntax](image.png)
+Difference between normal syntax and async await syntax
