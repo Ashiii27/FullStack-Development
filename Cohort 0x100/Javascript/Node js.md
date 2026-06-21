@@ -37,5 +37,9 @@ Client Side of HTTP Protocol:
 Server Side of HTTP Protocol:
 ![alt text](image-6.png)
 
+How communication happens??
+![alt text](image-7.png)
 
-
+1 - Browser parses the URL
+2 - Does a DNS lookup ( converts website into IP)
+3 - Establishes a connection to the IP ( performs handshake)
