@@ -43,3 +43,9 @@ How communication happens??
 1 - Browser parses the URL
 2 - Does a DNS lookup ( converts website into IP)
 3 - Establishes a connection to the IP ( performs handshake)
+
+Common methods used to send requests to backend server are:
+1)Post
+2)Get
+3)Delete
+4)Put
