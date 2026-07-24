@@ -49,3 +49,15 @@ Common methods used to send requests to backend server are:
 2)Get
 3)Delete
 4)Put
+
+
+![alt text](image-8.png)
+
+Common status codes by which backend responds :
+
+1. 200 - everything is ok
+2. 404 - page/route not found
+3. 403 - authentication issues
+4. 500 - internal server error
+
+There are many libraries that allow us to create HTTP servers ... The most famous one is express
