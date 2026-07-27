@@ -26,24 +26,37 @@ var user = [{
     name: "John Doe",
     kidneys: [{
         healthy: false
-    }, {
-        healthy: true
     }]
 }];
 
+app.use(express.json());
 
 app.get("/",function(req,res){
     const johnKidneys = user[0].kidneys;
     const numberOfKidneys = johnKidneys.length;
-    const numberOfHealthyKidneys = 
+    const numberOfHealthyKidneys = johnKidneys.filter(kidney => kidney.healthy).length;
     console.log(johnKidneys);
-    res.json({ kidneys: johnKidneys, numberOfKidneys });
+    res.json({ kidneys: johnKidneys, numberOfKidneys, numberOfHealthyKidneys });
 })
 
+app.post("/", function (req, res) {
+    const isHealthy = req.body.isHealthy;
+    user[0].kidneys.push({ healthy: isHealthy });
+    res.json({ message: "Kidney added successfully" });
+});
+
+app.put("/", function (req, res) {
+    const isHealthy = req.body.isHealthy;
+    user[0].kidneys[0].healthy = isHealthy;
+    res.json({ message: "Kidney updated successfully" });
+});
+
+app.delete("/", function (req, res) {
+    user[0].kidneys.shift();
+    res.json({ message: "Kidney deleted successfully" });
+});
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
-// app.post("/user", function(req, res){
-//     // Logic for adding a new user
-// });
+
